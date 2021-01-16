@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Simple Calculator</h1>
+        <p>Perform basic numeric operations</p>
+      </div>
+    </header>
+    <main id="main" class="container">
+      <div id="calculator" class="container">
+        <div id="display">
+          <button type="submit" class="btn-large operator" id="ac">AC</button>
+          <input autofocus type="number" id="screen" class="displayArea" />
+        </div>
+        <div id="input">
+          <div id="operators">
+            <button type="submit" class="btn-large operator" id="+">+</button>
+            <button type="submit" class="btn-large operator" id="-">-</button>
+            <button type="submit" class="btn-large operator" id="*">*</button>
+            <button type="submit" class="btn-large operator" id="/">/</button>
+          </div>
+          <div id="numbers">
+            <a class="btn-large number" id="9">9</a>
+            <a class="btn-large number" id="8">8</a>
+            <a class="btn-large number" id="7">7</a>
+            <a class="btn-large number" id="6">6</a>
+            <a class="btn-large number" id="5">5</a>
+            <a class="btn-large number" id="4">4</a>
+            <a class="btn-large number" id="3">3</a>
+            <a class="btn-large number" id="2">2</a>
+            <a class="btn-large number" id="1">1</a>
+            <a class="btn-large number" id=".">.</a>
+            <a class="btn-large number" id="0">0</a>
+            <button type="submit" class="btn-large operator" id="=">=</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer" class="page-footer">
+      <div class="container footer-copyright"><p id="copyright"></p></div>
+    </footer>
+    <script src="https://www.ominini.com/js/main.js"></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>

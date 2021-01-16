@@ -1,0 +1,82 @@
+:root {
+  font-size: 100%;
+  color: white;
+  background-color: #202020;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#main {
+  margin: auto;
+  width: 50%;
+  min-width: 350px;
+  flex: 1 0 auto;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#display {
+  margin: auto;
+  width: 90%;
+}
+
+#screen {
+  width: 70%;
+  color: white;
+  text-align: end;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#input {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+#operators {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 5px;
+}
+
+#numbers {
+  display: inline-grid;
+  grid-gap: 5px 5px;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
+}
+
+#footer {
+  background-color: #26a69a;
+  color: white;
+}
