@@ -47,7 +47,7 @@ const numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => {
   number.onclick = function () {
     let screen = document.querySelector("#screen");
-    screen.value = screen.value+number.id
+    if (number.id == "." && screen.value.includes(".")) { } else { screen.value = screen.value + number.id }
   }
 })
 
@@ -55,11 +55,11 @@ const operators = document.querySelectorAll(".operator");
 operators.forEach((operator) => {
   operator.onclick = function () {
     let screen = document.querySelector("#screen");
-    ab.push(screen.value); // get value
+    ab.push(Number(screen.value)); // get value
     console.log(`${op}: ${ab}`)
     clearScreen(); // clear screen
     if (op && ab.length == 2) {
-      answer = compute(op)
+      answer = (compute(op)).toFixed(4)
       console.log(answer)
       screen.value = answer
       ab = [];
