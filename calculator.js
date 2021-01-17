@@ -26,6 +26,8 @@ function clearScreen() {
 let ac = document.querySelector("#ac");
 ac.onclick = function () {
   clearScreen();
+  ab = []
+  answer = ""
 };
 
 function compute(operator) {
@@ -41,6 +43,12 @@ function compute(operator) {
     case "=":
       return answer;
   }
+}
+
+function handleNumber(number) {
+  if (number % 1 == 0) {
+    return parseInt(number)
+  } else { return number.toFixed(4) }
 }
 
 const numbers = document.querySelectorAll(".number");
@@ -59,10 +67,11 @@ operators.forEach((operator) => {
     console.log(`${op}: ${ab}`)
     clearScreen(); // clear screen
     if (op && ab.length == 2) {
-      answer = (compute(op)).toFixed(4)
+      answer = compute(op)
       console.log(answer)
-      screen.value = answer
-      ab = [];
+      screen.value = handleNumber(answer)
+      ab=[]
+      answer=""
     }
     op = operator.id // get new operator
   };

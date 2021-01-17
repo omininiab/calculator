@@ -26,6 +26,7 @@ body {
   row-gap: 10px;
   justify-content: center;
   align-items: center;
+  padding-top: 15%;
 }
 
 #display {
@@ -37,6 +38,8 @@ body {
   width: 70%;
   color: white;
   text-align: end;
+  padding-right: 5px;
+  border: 1px solid brown;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -67,6 +70,10 @@ input[type="number"] {
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 5px;
+}
+
+#ac, .operator {
+  background-color: brown;
 }
 
 #numbers {
